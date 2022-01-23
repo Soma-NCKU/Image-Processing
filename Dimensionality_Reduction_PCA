@@ -34,7 +34,7 @@ axis equal;
 
 hold on; 
 plot(eigVec(1,1)*sqrt(eigVal(1))*[-2:2], eigVec(2,1)*sqrt(eigVal(1))*[-2:2], 'r');
-plot(eigVec(2,1)*sqrt(eigVal(2))*[-2:2], eigVec(2,2)*sqrt(eigVal(2))*[-2:2], 'g');
+plot(eigVec(1,2)*sqrt(eigVal(2))*[-2:2], eigVec(2,2)*sqrt(eigVal(2))*[-2:2], 'g');
 
 theta = (0:0.05:2*pi);
 ellipse_X = 2*sqrt(eigVal(1))*eigVec(1,1)*cos(theta) +...
