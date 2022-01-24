@@ -42,3 +42,12 @@ ellipse_X = 2*sqrt(eigVal(1))*eigVec(1,1)*cos(theta) +...
 ellipse_Y = 2*sqrt(eigVal(1))*eigVec(2,1)*cos(theta) +...
     2*sqrt(eigVal(2))*eigVec(2,2)*sin(theta); 
 plot(ellipse_X, ellipse_Y, 'k--')
+
+% -----------------------------------------------------------
+
+% We can have both lossy (or) lossless dimensionality reduction technique on a dataset.
+
+[eigVec, D_pca, eigVal] = pca(D);
+
+plot([0; D_pca(1,1)*eigVec(1,1)], [0; D_pca(1,1)*eigVec(2,1)], 'g');
+
